@@ -38,3 +38,6 @@ backend/processed/
 # Misc
 .DS_Store
 Thumbs.db
+
+# Nested repo / output folder
+BG-Removed-/

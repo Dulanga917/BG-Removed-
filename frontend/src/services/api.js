@@ -1,9 +1,11 @@
 /**
  * api.js — Axios-based API client for the BgClear backend.
- * All endpoints target the Node.js Express gateway at http://localhost:5000.
+ * BASE_URL is set via environment variable:
+ *   - Development (.env):            VITE_API_BASE_URL=http://localhost:5000
+ *   - Production (.env.production):  VITE_API_BASE_URL=https://your-backend.onrender.com
  */
 
-const BASE_URL = 'http://localhost:5000'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
 
 /**
  * Internal helper — submit a multipart FormData and return the parsed JSON.
